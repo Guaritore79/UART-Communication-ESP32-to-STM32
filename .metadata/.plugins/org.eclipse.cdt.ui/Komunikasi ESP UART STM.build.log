@@ -1,0 +1,17 @@
+15:31:10 **** Incremental Build of configuration Debug for project Komunikasi ESP UART STM ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Komunikasi ESP UART STM.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\acerr\OneDrive\Documents\UART Communication ESP32 to STM32\Komunikasi ESP UART STM\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Komunikasi ESP UART STM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Komunikasi ESP UART STM.elf
+ 
+arm-none-eabi-size  Komunikasi\ ESP\ UART\ STM.elf 
+arm-none-eabi-objdump -h -S Komunikasi\ ESP\ UART\ STM.elf  > "Komunikasi ESP UART STM.list"
+   text	   data	    bss	    dec	    hex	filename
+  12296	     12	   1932	  14240	   37a0	Komunikasi ESP UART STM.elf
+Finished building: default.size.stdout
+ 
+Finished building: Komunikasi ESP UART STM.list
+ 
+
+15:31:12 Build Finished. 0 errors, 0 warnings. (took 1s.394ms)
+
